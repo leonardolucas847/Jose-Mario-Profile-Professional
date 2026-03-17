@@ -2,6 +2,7 @@ import { Container, GlobalStyle } from './styles';
 import { Hero } from './containers/hero';
 import Body from './containers/Body';
 import { useEffect } from 'react';
+import Footer from './containers/footer';
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,9 @@ function App() {
       <Hero />
       <Container>
         <Body />
+      </Container>
+      <Container>
+        <Footer />
       </Container>
     </>
   );

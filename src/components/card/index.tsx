@@ -1,3 +1,5 @@
+import SetaParaCima from '../seta';
+
 import * as S from './styles';
 import { motion } from 'framer-motion';
 
@@ -5,8 +7,7 @@ import { motion } from 'framer-motion';
 const meusCards = [
   {
     id: 1,
-    texto:
-      'aaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa',
+    texto: 'Acompanhamento de treino e dieta diretamente comigo.',
     link: 'https://google.com',
     img: '../../../Art-consult-compri.webp',
   },
@@ -48,7 +49,11 @@ export const ListaCards = () => {
           target="_blank"
         >
           <S.ImagemCard $url={card.img} />
-          <S.TextoExplicacao>{card.texto}</S.TextoExplicacao>
+          <S.TextoLayout>
+            <SetaParaCima />
+            <S.TextoExplicacao>{card.texto}</S.TextoExplicacao>
+            <S.Span>Clique aqui para saber mais</S.Span>
+          </S.TextoLayout>
         </MotionsCards>
       ))}
     </S.BodyLayout>

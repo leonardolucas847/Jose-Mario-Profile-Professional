@@ -30,20 +30,24 @@ export const CardLayout = styled.a`
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
+  align-items: center;
   padding: 24px 0px;
 `;
 
 export const TextoExplicacao = styled.p`
   max-width: 800px;
   width: 100%;
-  font-size: 20px;
-  font-weight: bold;
-  padding-top: 16px;
+  font-size: 24px;
+  padding-top: 32px;
   text-align: center;
-  color: #fff;
+  padding-bottom: 24px;
   overflow-wrap: break-word; /* Força a quebra de palavras gigantes */
   word-wrap: break-word; /* Compatibilidade com browsers antigos */
   hyphens: auto; /* Opcional: adiciona hífens na quebra */
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding-top: 48px;
+  }
 `;
 
 interface ImagemProps {
@@ -57,6 +61,7 @@ export const ImagemCard = styled.div<ImagemProps>`
   background-size: cover;
   background-position: center;
   border-radius: 15px;
+  z-index: 2;
 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 `;
@@ -69,4 +74,26 @@ export const BodyLayout = styled.section`
   width: 100%;
   max-width: 800px;
   min-height: 100vh;
+  color: #fff;
+`;
+
+export const TextoLayout = styled.div`
+  position: relative;
+  border: 2px solid #3b82f6; /* Cor do seu outline */
+  padding: 24px;
+  padding-top: 48px;
+  border-radius: 24px;
+  bottom: 16px;
+  width: 98%;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(to top, black 50%, transparent 90%);
+  mask-image: linear-gradient(to top, black 50%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+`;
+
+export const Span = styled.span`
+  text-align: center;
+  display: block;
+  color: #8a8a8a;
 `;

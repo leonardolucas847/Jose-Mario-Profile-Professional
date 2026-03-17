@@ -13,7 +13,6 @@ html {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     -webkit-tap-highlight-color: transparent; /* Remove o brilho azul no mobile */
-  user-select: none; /* Impede a seleção de texto/elementos */
     }`;
 
 export const Container = styled.div`
@@ -21,4 +20,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  text-decoration: none;
 `;
